@@ -1,0 +1,112 @@
+.skills {
+    .skills-inner {
+        width: 1300px;
+        margin: auto;
+
+        .skills-content {
+            width: 1000px;
+            margin: 10px auto;
+            padding: 20px;
+            color: #000;
+
+            .skills-progress {
+
+                .item {
+                    margin-bottom: 5px;
+
+                    &:nth-child(1) {
+                        .progress-level {
+                            animation-delay: 0s;
+                        }
+                    }
+
+                    &:nth-child(2) {
+                        .progress-level {
+                            animation-delay: 0.2s;
+                        }
+                    }
+
+                    &:nth-child(3) {
+                        .progress-level {
+                            animation-delay: 0.4s;
+                        }
+                    }
+
+                    &:nth-child(4) {
+                        .progress-level {
+                            animation-delay: 0.6s;
+                        }
+                    }
+
+                    &:nth-child(5) {
+                        .progress-level {
+                            animation-delay: 0.8s;
+                        }
+                    }
+
+                    &:nth-child(6) {
+                        .progress-level {
+                            animation-delay: 1s;
+                        }
+                    }
+
+                    &:nth-child(7) {
+                        .progress-level {
+                            animation-delay: 1.2s;
+                        }
+                    }
+
+                    &:nth-child(8) {
+                        .progress-level {
+                            animation-delay: 1.4s;
+                        }
+                    }
+
+                    &:nth-child(9) {
+                        .progress-level {
+                            animation-delay: 1.6s;
+                        }
+                    }
+
+                    p {
+                        overflow: hidden;
+
+                        span {
+                            margin: 5px;
+                            font-size: 15px;
+
+                            &:nth-child(1) {
+                                float: left;
+                            }
+
+                            &:nth-child(2) {
+                                float: right;
+                            }
+                        }
+                    }
+
+                    .progress {
+                        border: 1px solid #ddd;
+                        padding: 5px;
+                        border-radius: 3px;
+
+                        .progress-level {
+                            height: 13px;
+                            border-radius: 3px;
+                            background: linear-gradient(to right, #f9d7d7, #ccdcf9);
+                            animation-name: ani;
+                            animation-duration: 1s;
+                            animation-fill-mode: both;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@keyframes ani {
+    0% {
+        width: 0;
+    }
+}

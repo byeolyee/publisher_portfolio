@@ -1,0 +1,164 @@
+.banner {
+    background: linear-gradient(to left, $color-pantone-serenity, #c8dbff);
+    font-family: $font-raleway;
+
+    .banner-inner {
+        width: 1300px;
+        margin: auto;
+
+        .banner-content {
+            overflow: hidden;
+            padding: 35px 0;
+            position: relative;
+
+            div {
+                width: 50%;
+                float: left;
+            }
+
+            input[name=tabmenu] {
+                display: none;
+            }
+
+            .tab-btn {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                label {
+                    flex: 1;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    margin: 10px;
+                    color: #fff;
+                    margin: 5px;
+                    cursor: pointer;
+
+                    em {
+                        display: inline-block;
+                        width: 110px;
+                        height: 110px;
+                        background-color: #fff;
+                        border-radius: 50%;
+                        position: relative;
+
+                        .tab-icon {
+                            position: absolute;
+                            width: 60px;
+                            top: 50%;
+                            left: 50%;
+                            transform: translate(-50%, -50%);
+                            filter: invert(75%) sepia(31%) saturate(412%) hue-rotate(185deg) brightness(83%) contrast(95%);
+                        }
+                    }
+
+                    span {
+                        margin-top: 10px;
+                    }
+                }
+            }
+
+            .tabs {
+                padding-left: 50px;
+                position: absolute;
+                right: 0;
+                top: 50%;
+                transform: translateY(-50%);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+
+                .tab {
+                    // display: none;
+                    color: #fff;
+                    margin: 10px;
+                    width: 100%;
+                    display: none;
+
+                    h2 {
+                        font-size: 32px;
+                        font-weight: bold;
+                    }
+
+                    span {
+                        border-bottom: 2px solid #fff;
+                        padding: 3px;
+                        color: #fff;
+                    }
+                }
+            }
+        }
+    }
+
+    // checked function
+    input[id=tab1] {
+        &:checked {
+            ~.tabs .tab1 {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+            }
+
+            ~.tab-btn label[for=tab1] {
+                color: $color-pantone-ultimategray;
+
+                em {
+                    background-color: $color-pantone-ultimategray;
+
+                    .tab-icon {
+                        filter: invert(1);
+                    }
+                }
+            }
+        }
+    }
+
+    input[id=tab2] {
+        &:checked {
+            ~.tabs .tab2 {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+            }
+
+            ~.tab-btn label[for=tab2] {
+                color: $color-pantone-ultimategray;
+
+                em {
+                    background-color: $color-pantone-ultimategray;
+
+                    .tab-icon {
+                        filter: invert(1);
+                    }
+                }
+            }
+        }
+    }
+
+    input[id=tab3] {
+        &:checked {
+            ~.tabs .tab3 {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+            }
+
+            ~.tab-btn label[for=tab3] {
+                color: $color-pantone-ultimategray;
+
+                em {
+                    background-color: $color-pantone-ultimategray;
+
+                    .tab-icon {
+                        filter: invert(1);
+                    }
+                }
+            }
+        }
+    }
+}

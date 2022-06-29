@@ -1,0 +1,49 @@
+.aboutme {
+    text-transform: uppercase;
+
+    .aboutme-inner {
+        width: 1300px;
+        margin: 0 auto;
+
+        .aboutme-content {
+            display: flex;
+            margin: 15px 0;
+
+            div {
+                flex: 1;
+            }
+
+            .aboutme-desc {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                padding: 0 50px;
+                padding-top: 30px;
+
+                h2 {
+                    font-weight: bold;
+                    font-size: 30px;
+                    margin: 10px;
+                }
+
+                span {
+                    color: $color-pantone-serenity;
+                    font-weight: bold;
+                }
+            }
+
+            .aboutme-mockup {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                img {
+                    width: 450px;
+                    height: 450px;
+                    filter: opacity(.6);
+                }
+            }
+        }
+    }
+}
