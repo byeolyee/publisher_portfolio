@@ -737,7 +737,7 @@ header .gnb-box label[for=trigger] span:nth-child(3) {
 }
 .publishing .publishing-inner .publishing-content .publishing-item .num {
   width: 25%;
-  font-size: 16vh;
+  font-size: 5rem;
   font-weight: 900;
   text-align: center;
   color: #444444;
@@ -762,7 +762,7 @@ header .gnb-box label[for=trigger] span:nth-child(3) {
   padding: 10px;
 }
 .publishing .publishing-inner .publishing-content .publishing-item .publishing-box .desc div h3 {
-  font-size: 1em;
+  font-size: 1rem;
   font-weight: 800;
   line-height: 1.8;
   color: #93a9d1;
@@ -772,7 +772,7 @@ header .gnb-box label[for=trigger] span:nth-child(3) {
 }
 .publishing .publishing-inner .publishing-content .publishing-item .publishing-box .desc a {
   margin: auto 10px;
-  font-size: 3vh;
+  font-size: 1rem;
   font-weight: 700;
   padding: 10px;
   transition: 0.4s;
