@@ -797,7 +797,7 @@ header .gnb-box label[for=trigger] span:nth-child(3) {
     margin-top: 0;
   }
   .publishing .publishing-inner .publishing-content .publishing-item .publishing-box .desc div h3 {
-    font-size: 2rem;
+    font-size: 1.5rem;
   }
   .publishing .publishing-inner .publishing-content .publishing-item .publishing-box .desc div p {
     display: none;
