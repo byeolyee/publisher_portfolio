@@ -2,7 +2,7 @@
     text-transform: uppercase;
     padding-top : 80px;
     .aboutme-inner {
-        width: 1300px;
+        width : 100%;
         margin: 0 auto;
 
         .aboutme-content {
@@ -42,6 +42,19 @@
                     width: 450px;
                     height: 450px;
                     filter: opacity(.6);
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width : 1024px) {
+    .aboutme{
+        .aboutme-inner{
+            .aboutme-content{
+                flex-direction: column;
+                .aboutme-mockup{
+                    display : none;
                 }
             }
         }

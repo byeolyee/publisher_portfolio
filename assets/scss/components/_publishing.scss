@@ -1,11 +1,10 @@
 .publishing {
     font-family: $font-raleway;
     color: #2e2e2e;
-
+    margin : 0 10px;
     .publishing-inner {
-        width: 1300px;
-        margin: auto;
-
+        width: 100%;
+        margin: 0 auto;
         .publishing-content {
             .publishing-item {
                 display: flex;
@@ -74,4 +73,12 @@
             }
         }
     }
+}
+
+@media screen and (max-width : 1024px){
+    
+}
+
+@media screen and (max-width : 768px){
+    
 }

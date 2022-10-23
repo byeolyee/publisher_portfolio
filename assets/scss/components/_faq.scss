@@ -1,6 +1,7 @@
 .faq {
+    width : 100vw;
     .faq-inner {
-        width: 1300px;
+        width: 100%;
         margin: auto;
 
         .faq-content {
@@ -85,6 +86,21 @@
                         transform: translateY(-3px);
                         box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
                     }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width : 1024px) {
+    .faq{
+        .faq-inner{
+            .faq-content{
+                .faq-accodion{
+                    width : 100%;
+                }
+                .image-content{
+                    display : none;
                 }
             }
         }

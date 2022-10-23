@@ -60,3 +60,9 @@ body {
         margin: 25px 0;
     }
 }
+
+@media screen and (max-width : 1024px) {
+    .headline-share{
+        display : none;
+    }
+}

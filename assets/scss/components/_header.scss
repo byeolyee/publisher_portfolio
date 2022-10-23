@@ -1,12 +1,12 @@
 header {
     text-transform: uppercase;
     position: fixed;
-    width: 100%;
+    width: 100vw;
     z-index: 9999;
     background-color: #fff;
 
     .header-inner {
-        width: 1300px;
+        width: 100%;
         margin: auto;
         display: flex;
         justify-content: space-between;
@@ -24,14 +24,116 @@ header {
             }
         }
 
-        .gnb {
-            display: flex;
-            justify-content: center;
-            align-items: center;
+        .gnb-box{
+            .gnb {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                transition: .3s;
+                a {
+                    margin: 10px;
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+}
 
-            a {
-                margin: 10px;
-                font-size: 16px;
+header{
+    .gnb-box{
+        margin-left: 10px;
+        input[id=trigger]{
+            display : none;
+            &:checked + label span{
+                &:nth-child(1){
+                    top : 50%;
+                    transform: rotate(45deg);
+                }
+                &:nth-child(2){
+                    opacity: 0;
+                }
+                &:nth-child(3){
+                    top : 50%;
+                    transform: rotate(-45deg);
+                }
+            }
+        }
+        label[for=trigger]{
+            width : 30px;
+            height : 20px;
+            display : none;
+            position: relative;
+            span{
+                position: absolute;
+                height : 2px;
+                background-color: #000;
+                width: 100%;
+                left: 0;
+                transition: .3s;
+                &:nth-child(1){
+                    top : 0;
+                }
+                &:nth-child(2){
+                    top : 50%;
+                }
+                &:nth-child(3){
+                    top : 100%;
+                }
+            }
+        }
+    }
+}
+
+//media
+
+@media all and (max-width : 1024px) {
+    header{
+        .header-inner{
+            .logo{
+                display : none;
+            }
+            .gnb-box{
+                width : 100%;
+                .gnb{
+                    justify-content: space-between;
+                    a{
+                        flex-shrink: 0;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media all and (max-width : 768px) {
+    header{
+        position: absolute;
+        .header-inner{
+            .gnb-box {
+                display : block;
+                .gnb{
+                    height : 100vh;
+                    flex-direction: column;
+                    left : -200px;
+                    position: fixed;
+                }
+                label[for=trigger]{
+                    display : block;
+                }
+            }
+            .gnb-box{
+                input[id=trigger]{
+                    &:checked{
+                        &~ .gnb{
+                            left : 0;
+                            background-color: #fff;
+                        }
+                        &+ label{
+                            left : 120px;
+                            top : 20px;
+                        }
+                    }
+                }
             }
         }
     }

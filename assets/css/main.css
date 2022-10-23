@@ -232,15 +232,20 @@ body {
   margin: 25px 0;
 }
 
+@media screen and (max-width: 1024px) {
+  .headline-share {
+    display: none;
+  }
+}
 header {
   text-transform: uppercase;
   position: fixed;
-  width: 100%;
+  width: 100vw;
   z-index: 9999;
   background-color: #fff;
 }
 header .header-inner {
-  width: 1300px;
+  width: 100%;
   margin: auto;
   display: flex;
   justify-content: space-between;
@@ -252,16 +257,97 @@ header .header-inner .logo a img {
   height: 50px;
   display: block;
 }
-header .header-inner .gnb {
+header .header-inner .gnb-box .gnb {
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: 0.3s;
 }
-header .header-inner .gnb a {
+header .header-inner .gnb-box .gnb a {
   margin: 10px;
   font-size: 16px;
 }
 
+header .gnb-box {
+  margin-left: 10px;
+}
+header .gnb-box input[id=trigger] {
+  display: none;
+}
+header .gnb-box input[id=trigger]:checked + label span:nth-child(1) {
+  top: 50%;
+  transform: rotate(45deg);
+}
+header .gnb-box input[id=trigger]:checked + label span:nth-child(2) {
+  opacity: 0;
+}
+header .gnb-box input[id=trigger]:checked + label span:nth-child(3) {
+  top: 50%;
+  transform: rotate(-45deg);
+}
+header .gnb-box label[for=trigger] {
+  width: 30px;
+  height: 20px;
+  display: none;
+  position: relative;
+}
+header .gnb-box label[for=trigger] span {
+  position: absolute;
+  height: 2px;
+  background-color: #000;
+  width: 100%;
+  left: 0;
+  transition: 0.3s;
+}
+header .gnb-box label[for=trigger] span:nth-child(1) {
+  top: 0;
+}
+header .gnb-box label[for=trigger] span:nth-child(2) {
+  top: 50%;
+}
+header .gnb-box label[for=trigger] span:nth-child(3) {
+  top: 100%;
+}
+
+@media all and (max-width: 1024px) {
+  header .header-inner .logo {
+    display: none;
+  }
+  header .header-inner .gnb-box {
+    width: 100%;
+  }
+  header .header-inner .gnb-box .gnb {
+    justify-content: space-between;
+  }
+  header .header-inner .gnb-box .gnb a {
+    flex-shrink: 0;
+  }
+}
+@media all and (max-width: 768px) {
+  header {
+    position: absolute;
+  }
+  header .header-inner .gnb-box {
+    display: block;
+  }
+  header .header-inner .gnb-box .gnb {
+    height: 100vh;
+    flex-direction: column;
+    left: -200px;
+    position: fixed;
+  }
+  header .header-inner .gnb-box label[for=trigger] {
+    display: block;
+  }
+  header .header-inner .gnb-box input[id=trigger]:checked ~ .gnb {
+    left: 0;
+    background-color: #fff;
+  }
+  header .header-inner .gnb-box input[id=trigger]:checked + label {
+    left: 120px;
+    top: 20px;
+  }
+}
 .welcome {
   position: relative;
   height: 100vh;
@@ -483,7 +569,7 @@ header .header-inner .gnb a {
   padding-top: 80px;
 }
 .aboutme .aboutme-inner {
-  width: 1300px;
+  width: 100%;
   margin: 0 auto;
 }
 .aboutme .aboutme-inner .aboutme-content {
@@ -521,12 +607,20 @@ header .header-inner .gnb a {
   filter: opacity(0.6);
 }
 
+@media screen and (max-width: 1024px) {
+  .aboutme .aboutme-inner .aboutme-content {
+    flex-direction: column;
+  }
+  .aboutme .aboutme-inner .aboutme-content .aboutme-mockup {
+    display: none;
+  }
+}
 .skills .skills-inner {
-  width: 1300px;
+  width: 100%;
   margin: auto;
 }
 .skills .skills-inner .skills-content {
-  width: 1000px;
+  width: 100%;
   margin: 10px auto;
   padding: 20px;
   color: #000;
@@ -593,13 +687,19 @@ header .header-inner .gnb a {
     width: 0;
   }
 }
+@media screen and (max-width: 1024px) {
+  .skills .skills-inner .skills-content {
+    width: 100%;
+  }
+}
 .publishing {
   font-family: "Raleway", sans-serif;
   color: #2e2e2e;
+  margin: 0 10px;
 }
 .publishing .publishing-inner {
-  width: 1300px;
-  margin: auto;
+  width: 100%;
+  margin: 0 auto;
 }
 .publishing .publishing-inner .publishing-content .publishing-item {
   display: flex;
@@ -656,8 +756,11 @@ header .header-inner .gnb a {
   transform: translateY(-5px);
 }
 
+.script {
+  width: 100vw;
+}
 .script .script-inner {
-  width: 1300px;
+  width: 100%;
   margin: auto;
 }
 .script .script-inner .script-content .script-item {
@@ -722,8 +825,11 @@ header .header-inner .gnb a {
   margin: 0 10px;
 }
 
+.faq {
+  width: 100vw;
+}
 .faq .faq-inner {
-  width: 1300px;
+  width: 100%;
   margin: auto;
 }
 .faq .faq-inner .faq-content > div {
@@ -783,4 +889,13 @@ header .header-inner .gnb a {
 .faq .faq-inner .faq-content .image-content .btn-image:hover {
   transform: translateY(-3px);
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+@media screen and (max-width: 1024px) {
+  .faq .faq-inner .faq-content .faq-accodion {
+    width: 100%;
+  }
+  .faq .faq-inner .faq-content .image-content {
+    display: none;
+  }
 }/*# sourceMappingURL=main.css.map */
