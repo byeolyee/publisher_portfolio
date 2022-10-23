@@ -790,6 +790,9 @@ header .gnb-box label[for=trigger] span:nth-child(3) {
   .publishing .publishing-inner .publishing-content .publishing-item h2 {
     display: none;
   }
+  .publishing .publishing-inner .publishing-content .publishing-item .publishing-box .publishing-images {
+    display: none;
+  }
   .publishing .publishing-inner .publishing-content .publishing-item .publishing-box .desc {
     border: 0;
     align-items: center;
