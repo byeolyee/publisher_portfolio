@@ -777,9 +777,6 @@ header .gnb-box label[for=trigger] span:nth-child(3) {
   padding: 10px;
   transition: 0.4s;
 }
-.publishing .publishing-inner .publishing-content .publishing-item .publishing-box .desc a:hover {
-  transform: translateY(-5px);
-}
 
 @media screen and (max-width: 768px) {
   .publishing .publishing-inner .publishing-content .publishing-item {
