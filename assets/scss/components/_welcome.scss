@@ -2,7 +2,7 @@
     position: relative;
     // padding-top: 120px;
     height: 100vh;
-
+    width : 100vw;
     // .slideshow {
 
     //     .slick-arrow {
@@ -14,7 +14,7 @@
     //     }
     // }
     .welcome-inner {
-        width: 1300px;
+        width: 100%;
         margin: 0 auto;
     }
 
@@ -111,6 +111,31 @@
 
             100% {
                 top: 10px;
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width : 1024px) {
+    .welcome{
+        height : 70vh;
+        .welcome-inner{
+            .welcome-heading{
+                width : 100%;
+                span{
+                    font-size: 1em;
+                }
+                h1{
+                    font-size: 2em;
+                }
+                p{
+                    font-size: 1em;
+                    margin-bottom: 25px;
+                }
+            }
+            .mouse{
+                display : none;
             }
         }
     }

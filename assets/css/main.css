@@ -351,9 +351,10 @@ header .gnb-box label[for=trigger] span:nth-child(3) {
 .welcome {
   position: relative;
   height: 100vh;
+  width: 100vw;
 }
 .welcome .welcome-inner {
-  width: 1300px;
+  width: 100%;
   margin: 0 auto;
 }
 .welcome .welcome-heading {
@@ -438,6 +439,27 @@ header .gnb-box label[for=trigger] span:nth-child(3) {
   }
 }
 
+@media screen and (max-width: 1024px) {
+  .welcome {
+    height: 70vh;
+  }
+  .welcome .welcome-inner .welcome-heading {
+    width: 100%;
+  }
+  .welcome .welcome-inner .welcome-heading span {
+    font-size: 1em;
+  }
+  .welcome .welcome-inner .welcome-heading h1 {
+    font-size: 2em;
+  }
+  .welcome .welcome-inner .welcome-heading p {
+    font-size: 1em;
+    margin-bottom: 25px;
+  }
+  .welcome .welcome-inner .mouse {
+    display: none;
+  }
+}
 .banner {
   background: linear-gradient(to left, #93a9d1, #c8dbff);
   font-family: "Raleway", sans-serif;
@@ -608,6 +630,9 @@ header .gnb-box label[for=trigger] span:nth-child(3) {
 }
 
 @media screen and (max-width: 1024px) {
+  .aboutme {
+    padding-top: 0;
+  }
   .aboutme .aboutme-inner .aboutme-content {
     flex-direction: column;
   }
@@ -737,7 +762,7 @@ header .gnb-box label[for=trigger] span:nth-child(3) {
   padding: 10px;
 }
 .publishing .publishing-inner .publishing-content .publishing-item .publishing-box .desc div h3 {
-  font-size: 2vw;
+  font-size: 1em;
   font-weight: 800;
   line-height: 1.8;
   color: #93a9d1;
@@ -756,6 +781,28 @@ header .gnb-box label[for=trigger] span:nth-child(3) {
   transform: translateY(-5px);
 }
 
+@media screen and (max-width: 768px) {
+  .publishing .publishing-inner .publishing-content .publishing-item {
+    flex-direction: column;
+    align-items: center;
+    border: 0;
+  }
+  .publishing .publishing-inner .publishing-content .publishing-item h2 {
+    display: none;
+  }
+  .publishing .publishing-inner .publishing-content .publishing-item .publishing-box .desc {
+    border: 0;
+    align-items: center;
+    justify-content: center;
+    margin-top: 0;
+  }
+  .publishing .publishing-inner .publishing-content .publishing-item .publishing-box .desc div h3 {
+    font-size: 2rem;
+  }
+  .publishing .publishing-inner .publishing-content .publishing-item .publishing-box .desc div p {
+    display: none;
+  }
+}
 .script {
   width: 100vw;
 }
